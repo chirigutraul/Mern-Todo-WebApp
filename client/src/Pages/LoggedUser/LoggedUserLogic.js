@@ -11,8 +11,6 @@ const LoggedUserLogic = () => {
       isLogged:false,
     });
     const [task,setTask] = useState('');
-    const [userStatus, setUserStatus] = useState('');
-
 
     // isLogged() makes a get request to see if the user is logged(in the database)
     const isLogged = async () => {
@@ -62,7 +60,7 @@ const LoggedUserLogic = () => {
     }
 
     return {username,navigate,loggedUser,setUser,task,setTask,
-    isLogged,logOut,inputTask, deleteTask, userStatus};
+    isLogged,logOut,inputTask, deleteTask};
 }
 
 export default LoggedUserLogic;

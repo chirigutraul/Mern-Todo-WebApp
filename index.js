@@ -3,14 +3,12 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const User = require ('./models/User');
 const dotenv = require ('dotenv');
+const path = require('path');
 dotenv.config();
 
 const app = express();
 
-// changes made for deplyoment
-const path = require('path');
-app.use(express.static(path.join(__dirname, "client" , "build")));
-//
+
 
 app.use(express.json());
 app.use(cors());
@@ -125,10 +123,13 @@ app.post("/users/:linkUserId/delete", (req,res) => {
 })
 
 //changes made for deployment
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
 
-app.get("*", (req,res)=>{
-    res.sendFile(path.join(__dirname,"client" ,"src" , "index.js"));
-})
+    app.get('*', (req,res)=>{
+        res.sendFile(path.resolve(__dirname, 'client', 'build' ,'index.html'));
+    });
+}
 // eo changed made for deployment
 
 app.listen(process.env.PORT || 3001, () => {
