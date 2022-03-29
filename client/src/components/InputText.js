@@ -7,8 +7,6 @@ const InputText = styled.input.attrs({
     font-size:2rem;
     font-family:Montserrat;
     color: rgb(255,255,255,64%);
-    min-height:5vh;
-    max-height:6vh;
     border-radius:1rem;
     margin: 0.5rem auto;
     border:1px solid #888888;

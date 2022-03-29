@@ -9,7 +9,8 @@ const StatusMessage = styled.h1`
     
     @media(max-width:50rem){
         font-size:2.5rem;
-        margin: 1.5rem 1.5rem;
+        text-align:center;
+        margin:1rem auto;
     }
 `
 

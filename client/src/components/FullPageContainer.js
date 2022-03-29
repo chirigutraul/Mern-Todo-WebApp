@@ -30,7 +30,7 @@ const FullPageContainer= styled.div`
         &>div>p{
             font-size:1.3rem;
             line-height:1.4;
-            margin:2rem 1.5rem;
+            margin:2rem 1rem;
         }
     }
 

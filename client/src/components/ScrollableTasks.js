@@ -4,7 +4,7 @@ const ScrollableTasks = styled.div`
     position:sticky;
     top:0;
     left:0;
-    height:35vh;
+    max-height:15rem;
     background:#363636;
     margin: 0 auto;
     text-align:center;
@@ -15,6 +15,13 @@ const ScrollableTasks = styled.div`
     ::-webkit-scrollbar {
      display: none;
     }   
+
+    @media(max-width:40rem){
+        max-height:10rem;
+    }
+    @media(max-height:55rem){
+        max-height:10rem;
+    }
 `
 
 export default ScrollableTasks;

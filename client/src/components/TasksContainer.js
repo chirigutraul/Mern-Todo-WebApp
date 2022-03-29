@@ -21,6 +21,7 @@ const TasksContainer = styled.div`
     @media(max-width:60rem){
         max-width:80%;
     }
+
 `
 
 export default TasksContainer;
