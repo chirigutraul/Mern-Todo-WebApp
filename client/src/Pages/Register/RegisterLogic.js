@@ -11,7 +11,7 @@ const RegisterLogic = () => {
 
     const registerUser = () => { 
     
-      Axios.post('http://localhost:3001/users/register', {
+      Axios.post('/users/register', {
         username: username,
         password: password,
         email: email,

@@ -22,7 +22,7 @@ function LoggedUser(props) {
   
     //Updates page informations after they change
     useEffect(()=>{
-      Axios.get(`http://localhost:3001/users/read/${username}`).then(foundUser=>{
+      Axios.get(`/users/read/${username}`).then(foundUser=>{
       if(!foundUser.data.isLogged) return
       else {
         setUser(foundUser.data);

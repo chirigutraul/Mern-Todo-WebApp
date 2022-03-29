@@ -10,7 +10,7 @@ const LoginLogic = () =>{
 
 
     const makeRequest = () => {
-        Axios.post('http://localhost:3001/users/login', {
+        Axios.post('/users/login', {
         username: username,
         password: password,
       }).then(response=>{
