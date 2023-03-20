@@ -9,7 +9,6 @@ dotenv.config();
 const app = express();
 
 
-
 app.use(express.json());
 app.use(cors());
 
@@ -38,9 +37,11 @@ app.get("/users/auth/:username" , async(req,res) => {
 app.post("/users/login", async(req,res)=>{
     User.findOne({username:req.body.username}, (err,foundUser) => {
         if(err){
+            console.log("ERROR:", err)
             res.send(err)
         } else{
             if(foundUser){
+                console.log(foundUser)
                 if (foundUser.password === req.body.password){
                     foundUser.isLogged=true;
                     foundUser.save();
