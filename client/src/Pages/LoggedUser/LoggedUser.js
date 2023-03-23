@@ -30,7 +30,6 @@ function LoggedUser(props) {
       }
     })
     },[]);
-    // 
     
    return(<div>
      <UserWelcomeMessage>Welcome, {loggedUser.username}! Here are your tasks. </UserWelcomeMessage>

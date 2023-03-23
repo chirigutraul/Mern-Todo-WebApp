@@ -11,6 +11,7 @@ const FormButton = styled.button`
    transition: 0.1s ease-out;
    max-width:80%;
    margin: 2rem auto 0rem auto;
+    cursor:pointer;
 
    &:hover{
        background:grey;

@@ -11,6 +11,7 @@ const Button = styled.button`
    border: 0.001rem solid grey;
    transition: 0.2s ease-out;
    max-width:80%;
+   cursor:pointer;
 
    &:hover{
        background:grey;

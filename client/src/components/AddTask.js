@@ -12,6 +12,7 @@ const AddTask = styled.input.attrs({
     border:1px solid #888888;
     box-shadow: 0 0 0.5rem 0.1rem #363636;
     max-width:60%;
+    cursor:pointer;
 
     @media(max-width:40rem){
         max-width:80%;

@@ -9,6 +9,7 @@ const AddButton = styled.button`
    border-radius: 100%;
    border: 0.001rem solid grey;
    transition: 0.5s ease-out;
+   cursor:pointer;
 
    &:hover{
        background:grey;
