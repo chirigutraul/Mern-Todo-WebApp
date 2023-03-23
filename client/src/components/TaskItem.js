@@ -11,6 +11,7 @@ const TaskItem = styled.li`
     max-width:80%;
     border-radius:1rem;
     box-shadow: 0 0 0.125rem 0.125rem #242424;
+    cursor:pointer;
 
     &:hover{
         background-color:#993333;
