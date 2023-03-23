@@ -18,11 +18,11 @@ function LoggedUser(props) {
     inputTask, deleteTask}=LoggedUserLogic(props);
     
     // isLogged component verifies if the user isLogged is true
-    isLogged();
   
     //Updates page informations after they change
     useEffect(()=>{
-      Axios.get(`/users/read/${username}`).then(foundUser=>{
+    isLogged();
+      Axios.get(`${process.env.REACT_APP_API_URI}/users/read/${username}`).then(foundUser=>{
       if(!foundUser.data.isLogged) return
       else {
         setUser(foundUser.data);

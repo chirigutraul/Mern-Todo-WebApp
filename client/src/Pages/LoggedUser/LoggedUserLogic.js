@@ -14,7 +14,7 @@ const LoggedUserLogic = () => {
 
     // isLogged() makes a get request to see if the user is logged(in the database)
     const isLogged = async () => {
-        const response = await Axios.get(`/users/auth/${username}`)
+        const response = await Axios.get(`${process.env.REACT_APP_API_URI}/users/auth/${username}`)
         .then(foundUser =>{
             if(!foundUser.data.isLogged){
               navigate("/login");
@@ -29,7 +29,7 @@ const LoggedUserLogic = () => {
     // logOut sets the isLogged field from database to 'false'
     function logOut(e, propsLoggedUser){
         e.preventDefault();
-        Axios.post(`/users/${propsLoggedUser.username}/logout`).then(foundUser=>{
+        Axios.post(`${process.env.REACT_APP_API_URI}/users/${propsLoggedUser.username}/logout`).then(foundUser=>{
           setUser(foundUser.data);
         })
       }
@@ -39,7 +39,7 @@ const LoggedUserLogic = () => {
     // in user's tasks array
     function inputTask(e){
         e.preventDefault();
-        Axios.post(`/users/update/${loggedUser._id}` , {
+        Axios.post(`${process.env.REACT_APP_API_URI}/users/update/${loggedUser._id}` , {
           userId:loggedUser._id,
           userTask:task
         }).then(foundUser=>{
@@ -51,7 +51,7 @@ const LoggedUserLogic = () => {
     // Deleting task
     const deleteTask = (taskId) => {
       // console.log(loggedUser.tasks[taskId]);
-      Axios.post(`/users/${loggedUser._id}/delete`, {
+      Axios.post(`${process.env.REACT_APP_API_URI}/users/${loggedUser._id}/delete`, {
         userId:loggedUser._id,
         deletedTaskIndex:taskId
       }).then(foundUser => {

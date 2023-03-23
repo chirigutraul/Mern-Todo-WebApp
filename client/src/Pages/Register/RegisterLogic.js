@@ -11,7 +11,7 @@ const RegisterLogic = () => {
 
     const registerUser = () => { 
     
-      Axios.post('/users/register', {
+      Axios.post(`${process.env.REACT_APP_API_URI}/users/register`, {
         username: username,
         password: password,
         email: email,

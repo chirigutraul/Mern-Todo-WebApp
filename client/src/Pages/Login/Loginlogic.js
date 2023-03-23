@@ -10,7 +10,7 @@ const LoginLogic = () =>{
 
 
     const makeRequest = () => {
-        Axios.post('/users/login', {
+        Axios.post(`${process.env.REACT_APP_API_URI}/users/login`, {
         username: username,
         password: password,
       }).then(response=>{
