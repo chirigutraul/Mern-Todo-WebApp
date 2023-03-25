@@ -32,7 +32,7 @@ function App(){
           element={<LoggedUser user={loggedUser => changeUser(loggedUser)}/>}/>
           <Route path="*" element={<ErrorPage />} />          
       </Routes>
-      <StyledFooter>Chirigut Raul © 2022 {process.env.REACT_APP_API_URI}</StyledFooter>
+      <StyledFooter>Chirigut Raul © 2022</StyledFooter>
     </FullPageContainer> 
   );
   
